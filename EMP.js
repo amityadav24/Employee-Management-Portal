@@ -16,6 +16,16 @@ form.addEventListener("submit", function (e) {
     const roleVal = roleInput.value.trim();
 
     if (!nameVal || !emailVal || !roleVal) return;
+    const employeeData = { name: nameVal, email: emailVal, role: roleVal };
+    // let objjson = JSON.stringify(employeeData);
+    // localStorage.setItem("employee", objjson);
+
+    // console.log(JSON.parse(localStorage.getItem("employee")));
+    let prevdata = [];
+    prevdata = JSON.parse(localStorage.getItem("employee"))
+
+    prevdata.push(emdata);
+    localStorage.setItem("employee", JSON.stringify(prevdata));
 
     const employeeData = { name: nameVal, email: emailVal, role: roleVal };
 
