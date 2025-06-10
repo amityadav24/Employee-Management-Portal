@@ -18,6 +18,7 @@ form.addEventListener("submit", function (e) {
     if (!nameVal || !emailVal || !roleVal) return;
 
     const employeeData = { name: nameVal, email: emailVal, role: roleVal };
+    //for local
 
     if (editIndex === null) {
         employee.push(employeeData);
